@@ -10,13 +10,10 @@ public class JCalculator extends JFrame implements ActionListener {
     private JButton addButton, subtractButton, multiplyButton, divideButton, modulusButton, clearButton;
 
     public JCalculator() {
-        // Create text fields
         textField1 = new JTextField(10);
         textField2 = new JTextField(10);
         resultField = new JTextField(10);
         resultField.setEditable(false);
-
-        // Create buttons
         addButton = new JButton("+");
         subtractButton = new JButton("-");
         multiplyButton = new JButton("*");
@@ -24,7 +21,6 @@ public class JCalculator extends JFrame implements ActionListener {
         modulusButton = new JButton("%");
         clearButton = new JButton("Clear");
 
-        // Add action listeners to buttons
         addButton.addActionListener(this);
         subtractButton.addActionListener(this);
         multiplyButton.addActionListener(this);
@@ -32,7 +28,6 @@ public class JCalculator extends JFrame implements ActionListener {
         modulusButton.addActionListener(this);
         clearButton.addActionListener(this);
 
-        // Create panel and add components
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(7, 2));
         panel.add(new JLabel("First Number:"));
@@ -48,10 +43,8 @@ public class JCalculator extends JFrame implements ActionListener {
         panel.add(modulusButton);
         panel.add(clearButton);
 
-        // Add panel to frame
         add(panel);
 
-        // Set frame properties
         setTitle("Calculator");
         setSize(300, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
